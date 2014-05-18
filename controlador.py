@@ -6,14 +6,14 @@ import json
 import urllib, urllib2
 import sqlite3 # sudo apt-get sqlite3
 
-API= "***API****" # emoncms API key
+API= "50a5528a2f06bec6f75a67227a82cad5" # emoncms API key
 feedID=16 # emoncms feed id
 
 sec_per_day = 60 * 60 * 24
 end = (int(time.time()))                #now
-start = (end - (7 * sec_per_day))       #7 days ago
+start = (end - (1 * sec_per_day))       #1 days ago
 
-data_url = "http://emoncms.org/feed/data.json?apikey=" + API +"&id=" + str(feedID) + "&start=" + str(start*1000) + "&end=" + str(end*1000) + "&dp="
+data_url = "http://localhost/feed/data.json?apikey=" + API +"&id=" + str(feedID) + "&start=" + str(start*1000) + "&end=" + str(end*1000) + "&dp="
 
 # read in the data from emoncms
 try:
