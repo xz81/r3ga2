@@ -3,6 +3,7 @@
 #probando github otra vez
 
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import time
 import urllib
