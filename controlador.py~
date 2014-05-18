@@ -35,8 +35,8 @@ conn.execute ("""
 #Load the JSON data from EmonCMS into a table
 x=0
 for row in data:
-    conn.execute("INSERT INTO feed (time, data) VALUES (?,?)",
-                 (str(data[x][0]),float(data[x][1]))
+        conn.execute("INSERT INTO feed (time, data) VALUES (?,?)",
+                (str(data[x][0]),float(data[x][1]))
                 )
     x+=1
 
