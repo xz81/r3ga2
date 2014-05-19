@@ -4,7 +4,7 @@ import time, urllib, json, urllib2, sqlite3
 from urllib import quote_plus
 
 API = "aeda2c456069369dd9159ca25504a020"
-feedID = 6
+feedID = 7
 periodo_de_datos = 1 #en dias
 
 sec_per_day = 60 * 60 * 24
