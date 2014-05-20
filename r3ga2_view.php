@@ -16,8 +16,8 @@
 
 <div style=margin: 0px auto; max-width:320px;">
 	<div class="r3ga2-title"> r3ga2 controlador de riego </div>
-	<div class="r3ga2-vars"> <span id="temp">250</span> ºC </div>
-	<div class="r3ga2-vars"> <span id="hum">250</span> %HR </div>
+	<div class="r3ga2-vars">Temp: <span id="temp">250</span> ºC </div>
+	<div class="r3ga2-vars">Hum: <span id="hum">250</span> %HR </div>
 </div>
 
 <!-- bring in the emoncms path variable which tells this script what the base URL of emoncms is -->
