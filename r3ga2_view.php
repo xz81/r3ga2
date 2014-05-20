@@ -33,7 +33,8 @@ calls the feed API on the server via AJAX. I will also bring the multigraph API-
   // The feed api library requires the emoncms path
   var path = "<?php echo $path; ?>"
   var feeds = feed.list_by_id();    
-
+  var multigraph = multigraph.get();
+    
   // Update the elements on the page with the latest power and energy values.
   $("#temp").html(feeds[7]);               // feeds[temp-feed-id]
   $("#hum").html(feeds[8]);                // feeds[hum-feed-id]
