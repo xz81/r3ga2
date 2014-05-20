@@ -36,3 +36,27 @@ calls the feed API on the server via AJAX. -->
   $("#temp").html(feeds[7]);               // feeds[temp-feed-id]
   $("#hum").html(feeds[8]);                // feeds[hum-feed-id]
 </script>
+
+<script>
+
+  // The feed api library requires the emoncms path
+  var path = "<?php echo $path; ?>"
+
+  update();
+
+  // Set interval is a way of scheduling an periodic call to a function
+  // which we can then use to fetch the latest power value and update the page.
+  // update interval is set to 10 seconds (10000ms)
+  setInterval(update,10000);
+
+  function update()
+  {
+    // Get latest feed values from the server (this returns the equivalent of what you see on the feed/list page)
+    var feeds = feed.list_by_id();    
+
+    // Update the elements on the page with the latest power and energy values.
+    $("#temp").html(feeds[7]);
+    $("#hum").html(feeds[8]);
+  }
+
+</script>
