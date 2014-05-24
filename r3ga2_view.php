@@ -26,16 +26,30 @@
 	<div class="r3ga2-vars">Hum: <span id="hum"></span> %HR </div>
 	<div class="r3ga2-vars">Radiación: </div>
     </div>
+    
 </div>
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
-    <div style="padding-top: 20px; padding-bottom: 20px; border-top: 1px solid #fff">
-	<div style="float:left; padding-left:10px; padding-bottom:20px; paddign-top:10px; font-size: 25px; font-weight:bold;"><?php echo _("Opciones de riego")?> </div>
-	.
-
+    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?> 
+		<div style="float:right; padding-top:15px;">
+		<input type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
+		<input type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
+		</div>
+	</div>
     </div>
 </div>
+<div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
+    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
+		
+	</div>
+    </div>
 </div>
+
+</div>
+
+
 <div style="width: 600px; height:420px; float:right"><div style="height:400px; border: 1px solid #ddd; " ><iframe frameborder="1" width= "600" height="400" src="http://192.168.1.104/emoncms/vis/multigraph?mid=1&embed=1"></iframe>
 </div></div>
 
