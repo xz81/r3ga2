@@ -11,9 +11,17 @@
 		font-size:30px;
 		color:#0699fa;
 		padding: 10px;
-		
+
 	}
 </style>
+
+<?php global $path;
+	if (!isset($_GET['apikey'])) $apikey =""; else $apikey = $GET['apikey'];
+?>
+<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/packetgen/packetgen.js"> </script>
+
+
 
 <h2><?php echo _("r3ga2 - controlador de riego de código abierto"); ?></h2>
 
@@ -26,15 +34,15 @@
 	<div class="r3ga2-vars">Hum: <span id="hum"></span> %HR </div>
 	<div class="r3ga2-vars">Radiación: </div>
     </div>
-    
+
 </div>
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?> 
 		<div style="float:right; padding-top:15px;">
-		<input type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
-		<input type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
+		<input id="encender" type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
+		<input id="apagar" type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
 		</div>
 	</div>
     </div>
@@ -42,7 +50,7 @@
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
-		
+
 	</div>
     </div>
 </div>
@@ -56,17 +64,7 @@
 
 
 
-<!-- bring in the emoncms path variable which tells this script what the base URL of emoncms is -->
-<?php global $path; ?>
-
-<!-- feed.js is the feed api helper library, it gives us nice functions to use within our program that
-calls the feed API on the server via AJAX. I will also bring the multigraph API-->
-<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
-
-
-
 <script>
-
   // The feed api library requires the emoncms path
   var path = "<?php echo $path; ?>"
 
@@ -83,10 +81,25 @@ calls the feed API on the server via AJAX. I will also bring the multigraph API-
     var feeds = feed.list_by_id();    
 
     // Update the elements on the page with the latest power and energy values.
-    $("#temp").html(feeds[7]);
-    $("#hum").html(feeds[8]);
+    $("#temp").html(feeds[1]);
+    $("#hum").html(feeds[2]);
   }
 
 </script>
 
+<script>
+	var path = "<?php echo $path; ?>";
+	//var apikey = "<?php echo $apikey; ?>";
+	var apikey = "";
+	var packet = packetgen.get();
+
+	$("#encender").click(function(){
+		packet[6].value = 'true';
+		packetgen.set(packet,5);
+	}
+	$("#apagar").click(function(){
+		packet[6].value = 'false';
+		packetgen.set(packet,5);
+	}
+</script>
 

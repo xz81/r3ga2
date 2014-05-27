@@ -8,18 +8,53 @@
 	}
 	.r3ga2-vars {
 		font-weight:bold;
-		font-size:44px;
+		font-size:30px;
 		color:#0699fa;
-		padding-top:65px;
+		padding: 10px;
+		
 	}
 </style>
 
-<div style=margin: 0px auto; max-width:320px;">
-	<div class="r3ga2-title"> r3ga2 controlador de riego </div>
-	<div class="r3ga2-vars">Temp: <span id="temp">250</span> ºC </div>
-	<div class="r3ga2-vars">Hum: <span id="hum">250</span> %HR </div>
-	<div class="r3ga2-title">graph: <span id="graph">250</span> </div>
+<h2><?php echo _("r3ga2 - controlador de riego de código abierto"); ?></h2>
+
+<div style="float:left">
+
+<div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
+    <div style="padding-top: 20px; padding-bottom: 20px; border-top: 1px solid #fff">
+	<div style="float:left; padding-left:10px; padding-bottom:20px; paddign-top:10px; font-size: 25px; font-weight:bold;"><?php echo _("Condiciones actuales")?> </div>
+        <div class="r3ga2-vars">Temp: <span id="temp"></span> ºC </div>
+	<div class="r3ga2-vars">Hum: <span id="hum"></span> %HR </div>
+	<div class="r3ga2-vars">Radiación: </div>
+    </div>
+    
 </div>
+
+<div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
+    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?> 
+		<div style="float:right; padding-top:15px;">
+		<input type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
+		<input type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
+		</div>
+	</div>
+    </div>
+</div>
+<div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
+    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
+		
+	</div>
+    </div>
+</div>
+
+</div>
+
+
+<div style="width: 600px; height:420px; float:right"><div style="height:400px; border: 1px solid #ddd; " ><iframe frameborder="1" width= "600" height="400" src="http://192.168.1.104/emoncms/vis/multigraph?mid=1&embed=1"></iframe>
+</div></div>
+
+
+
 
 <!-- bring in the emoncms path variable which tells this script what the base URL of emoncms is -->
 <?php global $path; ?>
@@ -27,18 +62,8 @@
 <!-- feed.js is the feed api helper library, it gives us nice functions to use within our program that
 calls the feed API on the server via AJAX. I will also bring the multigraph API-->
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/vis/multigraph_api.js"></script>
 
-<script>
-  // The feed api library requires the emoncms path
-  var path = "<?php echo $path; ?>"
-  var feeds = feed.list_by_id();    
 
-  // Update the elements on the page with the latest power and energy values.
-  $("#temp").html(feeds[7]);               // feeds[temp-feed-id]
-  $("#hum").html(feeds[8]);                // feeds[hum-feed-id]
-  $("#graph").html(multigraph[1];	   // me lo traerá?
-</script>
 
 <script>
 
@@ -63,3 +88,5 @@ calls the feed API on the server via AJAX. I will also bring the multigraph API-
   }
 
 </script>
+
+
