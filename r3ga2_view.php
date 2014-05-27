@@ -41,8 +41,8 @@
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?> 
 		<div style="float:right; padding-top:15px;">
-		<input id="encender" type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
-		<input id="apagar" type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
+		<input id="Encender" type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
+		<input id="Apagar" type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
 		</div>
 	</div>
     </div>
@@ -93,13 +93,16 @@
 	var apikey = "";
 	var packet = packetgen.get();
 
-	$("#encender").click(function(){
-		packet[6].value = 'true';
-		packetgen.set(packet,5);
-	}
-	$("#apagar").click(function(){
-		packet[6].value = 'false';
-		packetgen.set(packet,5);
-	}
+	$("#Encender").click(function(){
+	 alert("has encendido el riego");
+	 packet[6].value=1;
+	 packetgen.set(packet,5);
+	});
+
+	$("#Apagar").click(function(){
+	 alert("has apagado el riego");
+	 packet[6].value=0;
+	 packetgen.set(packet,5);
+	});
 </script>
 
