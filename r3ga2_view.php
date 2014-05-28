@@ -47,9 +47,20 @@
 	</div>
     </div>
 </div>
+
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
+
+	</div>
+    </div>
+</div>
+
+</div>
+
+<div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
+    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Nutrición")?> 
 
 	</div>
     </div>
