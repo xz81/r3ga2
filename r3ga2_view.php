@@ -21,7 +21,7 @@
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/packetgen/packetgen.js"> </script>
 
-<h2><?php echo _("r3ga2 - controlador de riego de código abierto"); ?></h2>
+<h2><?php echo _("r3ga2 - controlador de riego"); ?></h2>
 
 <div style="float:left">
 
