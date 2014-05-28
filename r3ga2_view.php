@@ -56,6 +56,7 @@
         	<option value=1>kWh elapsed</option>
         	<option value=2>kWh per day</option>
         	<option value=3>Power (Watts)</option>
+	</select>
 	</div>
     </div>
 </div>
