@@ -51,7 +51,11 @@
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
-
+	<select style="width:80px">
+        	<option value=0>Watt hours elapsed</option>
+        	<option value=1>kWh elapsed</option>
+        	<option value=2>kWh per day</option>
+        	<option value=3>Power (Watts)</option>
 	</div>
     </div>
 </div>
