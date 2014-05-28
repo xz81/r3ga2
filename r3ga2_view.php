@@ -52,14 +52,14 @@
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
 	<select style="width:80px">
-        	<option value=0>Watt hours elapsed</option>
-        	<option value=1>kWh elapsed</option>
-        	<option value=2>kWh per day</option>
-        	<option value=3>Power (Watts)</option>
+        	<option value=0>judia</option>
+        	<option value=1>melon</option>
+        	<option value=2>pimiento</option>
+        	<option value=3>tomate</option>
 	</select>
 	</div>
     </div>
-</div>
+
 
 </div>
 
@@ -72,7 +72,6 @@
 </div>
 
 </div>
-
 
 <div style="width: 600px; height:420px; float:right"><div style="height:400px; border: 1px solid #ddd; " ><iframe frameborder="1" width= "600" height="400" src="http://192.168.1.104/emoncms/vis/multigraph?mid=1&embed=1"></iframe>
 </div></div>
