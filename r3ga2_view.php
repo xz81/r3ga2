@@ -21,8 +21,6 @@
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/packetgen/packetgen.js"> </script>
 
-
-
 <h2><?php echo _("r3ga2 - controlador de riego de código abierto"); ?></h2>
 
 <div style="float:left">
@@ -39,7 +37,7 @@
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
-	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?> 
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Riego manual")?>
 		<div style="float:right; padding-top:15px;">
 		<input id="Encender" type="submit" value="<?php echo _("Encender"); ?>" class="btn btn-info" />
 		<input id="Apagar" type="submit" value="<?php echo _("Apagar"); ?>" class="btn btn-info" />
@@ -49,19 +47,24 @@
 </div>
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
-    <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
-	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?> 
-	<select style="width:80px">
-        	<option value=0>judia</option>
-        	<option value=1>melon</option>
-        	<option value=2>pimiento</option>
-        	<option value=3>tomate</option>
-	</select>
+    <div style=" height: 170px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?></div>
+	<div style="float:right; font-size: 16px; font-weight: normal;"><?php echo _("cultivo:  "); ?>
+		<select style="width:100px">
+       			<option value=0>judia</option>
+       			<option value=1>melon</option>
+       			<option value=2>pimiento</option>
+       			<option value=3>tomate</option>
+		</select>
+	</div>
+	<div style="float:right; font-size: 16px; font-weight: normal"><?php echo _("fecha de trasplante: ") ?>
+		<select style="width:100px">
+			<option value=1>fecha</option>
+		</select>
 	</div>
     </div>
-
-
 </div>
+
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 70px; padding: 10px; border-top: 1px solid #fff">
@@ -72,9 +75,7 @@
 </div>
 
 </div>
-
-<div style="width: 600px; height:420px; float:right"><div style="height:400px; border: 1px solid #ddd; " ><iframe frameborder="1" width= "600" height="400" src="http://192.168.1.104/emoncms/vis/multigraph?mid=1&embed=1"></iframe>
-</div></div>
+<div style="width: 600px; height:420px; float:right"><div style="height:400px; border: 1px solid #ddd; " ><iframe frameborder="1" width= "600" height="400" src="http://192.168.1.104/emoncms/vis/multigraph?mid=1&embed=1"></iframe> </div></div>
 
 
 
