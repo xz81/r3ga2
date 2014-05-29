@@ -91,6 +91,9 @@
 			<option value=2>3 l/h</option>
 			<option value=3>4 l/h</option>
 		</select>
+		
+	<br><br>
+	<input id="Guardar" type="submit" value="<?php echo _("Guardar"); ?>" class="btn btn-info" />
 	</div>
 	</div>
     </div>
