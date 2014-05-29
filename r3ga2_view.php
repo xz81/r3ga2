@@ -11,7 +11,10 @@
 		font-size:30px;
 		color:#0699fa;
 		padding: 10px;
-
+	}
+	.r3ga2-texto {
+		font-weight: normal;
+		font-size:16px;
 	}
 </style>
 
@@ -63,6 +66,15 @@
                     <input id="export-start" data-format="dd/MM/yyyy" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
+	</div>
+	<div style="float:left; font-size: 16px; font-weight: normal;"><?php echo _("dosis de riego") ?></div>
+	<div style="float:right" class="r3ga2-texto"><?php echo _("goteros/planta: ") ?>
+		<select style="width:100px">
+       			<option value=0>1</option>
+       			<option value=1>2</option>
+			<option value=2>3</option>
+			<option value=3>4</option>
+		</select>
 	</div>
     </div>
 </div>
