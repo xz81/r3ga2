@@ -53,7 +53,7 @@
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
     <div style=" height: 300px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?></div>
-	<div style="float:left; padding-top:20px; font-size: 16px; font-weight: normal;"><?php echo _("cultivo:  "); ?>
+	<div style="float:left; padding-top:20px; font-size: 16px; font-weight: bold;"><?php echo _("cultivo:  "); ?>
 		<select style="width:100px">
        			<option value=0>judia</option>
        			<option value=1>melon</option>
@@ -61,19 +61,27 @@
        			<option value=3>tomate</option>
 		</select>
 	</div>
-	<div style="float:left; font-size: 16px; font-weight: normal"><?php echo _("fecha de trasplante: ") ?>
+	<div style="float:left; font-size: 16px; font-weight: bold"><?php echo _("fecha de trasplante: ") ?>
 		<div id="datetimepicker1" class="input-append date">
                     <input id="export-start" data-format="dd/MM/yyyy" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
 	</div>
-	<div style="float:left; font-size: 16px; font-weight: normal;"><?php echo _("dosis de riego") ?></div>
+	<div style="float:left; font-size: 16px; font-weight: bold;"><?php echo _("dosis de riego") ?></div>
 	<div style="float:right" class="r3ga2-texto"><?php echo _("goteros/planta: ") ?>
-		<select style="width:100px">
+		<select style="width:60px">
        			<option value=0>1</option>
        			<option value=1>2</option>
 			<option value=2>3</option>
 			<option value=3>4</option>
+		</select>
+	</div>
+	<div style="float:right" class="r3ga2-texto"><?php echo _("caudal goteros: ") ?>
+		<select style="width:80px">
+       			<option value=0>1 l/h</option>
+       			<option value=1>2 l/h</option>
+			<option value=2>3 l/h</option>
+			<option value=3>4 l/h</option>
 		</select>
 	</div>
     </div>
