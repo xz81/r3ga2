@@ -20,6 +20,7 @@
 ?>
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/feed/feed.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path; ?>Modules/packetgen/packetgen.js"> </script>
+<script type="text/javascript" src="<?php echo $path; ?>Lib/bootstrap-datetimepicker-0.0.11/js/bootstrap-datetimepicker.min.js"></script>
 
 <h2><?php echo _("r3ga2 - controlador de riego"); ?></h2>
 
@@ -58,9 +59,10 @@
 		</select>
 	</div>
 	<div style="float:right; font-size: 16px; font-weight: normal"><?php echo _("fecha de trasplante: ") ?>
-		<select style="width:100px">
-			<option value=1>fecha</option>
-		</select>
+		<div id="datetimepicker1" class="input-append date">
+                    <input id="export-start" data-format="dd/MM/yyyy hh:mm:ss" type="text" />
+                    <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+                </div>
 	</div>
     </div>
 </div>
