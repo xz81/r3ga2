@@ -48,9 +48,9 @@
 </div>
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
-    <div style=" height: 170px; padding: 10px; border-top: 1px solid #fff">
-	<div style="float:left; paddign-top:20px; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?></div>
-	<div style="float:right; font-size: 16px; font-weight: normal;"><?php echo _("cultivo:  "); ?>
+    <div style=" height: 300px; padding: 10px; border-top: 1px solid #fff">
+	<div style="float:left; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?></div>
+	<div style="float:left; padding-top:20px; font-size: 16px; font-weight: normal;"><?php echo _("cultivo:  "); ?>
 		<select style="width:100px">
        			<option value=0>judia</option>
        			<option value=1>melon</option>
@@ -58,9 +58,9 @@
        			<option value=3>tomate</option>
 		</select>
 	</div>
-	<div style="float:right; font-size: 16px; font-weight: normal"><?php echo _("fecha de trasplante: ") ?>
+	<div style="float:left; font-size: 16px; font-weight: normal"><?php echo _("fecha de trasplante: ") ?>
 		<div id="datetimepicker1" class="input-append date">
-                    <input id="export-start" data-format="dd/MM/yyyy hh:mm:ss" type="text" />
+                    <input id="export-start" data-format="dd/MM/yyyy" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
 	</div>
@@ -122,5 +122,10 @@
 	 packet[6].value=0;
 	 packetgen.set(packet,5);
 	});
+
+	$('#datetimepicker1').datetimepicker({
+	language: 'en-EN'
+	});
+
 </script>
 
