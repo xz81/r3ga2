@@ -51,7 +51,7 @@
 </div>
 
 <div style="width:320px; background-color:#efefef; margin-bottom:10px; border: 1px solid #ddd;">
-    <div style=" height: 300px; padding: 10px; border-top: 1px solid #fff">
+    <div style=" height: 350px; padding: 10px; border-top: 1px solid #fff">
 	<div style="float:left; font-size: 25px; font-weight:bold;"><?php echo _("Configurar riego")?></div>
 	<div style="float:left; padding-top:20px; font-size: 16px; font-weight: bold;"><?php echo _("cultivo:  "); ?>
 		<select style="width:100px">
@@ -86,16 +86,18 @@
 	</div>
 	<div style="float:right" class="r3ga2-texto"><?php echo _("plantas/m2: ") ?>
 		<select style="width:80px">
-       			<option value=0>1 l/h</option>
-       			<option value=1>2 l/h</option>
-			<option value=2>3 l/h</option>
-			<option value=3>4 l/h</option>
+       			<option value=0>1 </option>
+       			<option value=1>2 </option>
+			<option value=2>3 </option>
+			<option value=3>4 </option>
 		</select>
-		
-	<br><br>
+	</div>
+	</div>
+	<div style="float:right">
 	<input id="Guardar" type="submit" value="<?php echo _("Guardar"); ?>" class="btn btn-info" />
 	</div>
-	</div>
+	
+
     </div>
 </div>
 
