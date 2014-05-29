@@ -84,6 +84,14 @@
 			<option value=3>4 l/h</option>
 		</select>
 	</div>
+	<div style="float:right" class="r3ga2-texto"><?php echo _("plantas/m2: ") ?>
+		<select style="width:80px">
+       			<option value=0>1 l/h</option>
+       			<option value=1>2 l/h</option>
+			<option value=2>3 l/h</option>
+			<option value=3>4 l/h</option>
+		</select>
+	</div>
 	</div>
     </div>
 </div>
