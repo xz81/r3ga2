@@ -147,13 +147,13 @@
 
 	$("#Encender").click(function(){
 	 alert("has encendido el riego");
-	 packet[6].value=1;
+	 packet[4].value=1;
 	 packetgen.set(packet,5);
 	});
 
 	$("#Apagar").click(function(){
 	 alert("has apagado el riego");
-	 packet[6].value=0;
+	 packet[4].value=0;
 	 packetgen.set(packet,5);
 	});
 
