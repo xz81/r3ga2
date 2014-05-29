@@ -67,9 +67,9 @@
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
 	</div>
-	<div style="float:left; font-size: 16px; font-weight: bold;"><?php echo _("dosis de riego") ?></div>
-	<div style="float:right" class="r3ga2-texto"><?php echo _("goteros/planta: ") ?>
-		<select style="width:60px">
+	<div style="float:left; font-size: 16px; font-weight: bold;"><?php echo _("dosis de riego:") ?>
+	<div style="float:right; padding-top:15px" class="r3ga2-texto"><?php echo _("goteros/planta: ") ?>
+		<select style="width:80px">
        			<option value=0>1</option>
        			<option value=1>2</option>
 			<option value=2>3</option>
@@ -83,6 +83,7 @@
 			<option value=2>3 l/h</option>
 			<option value=3>4 l/h</option>
 		</select>
+	</div>
 	</div>
     </div>
 </div>
