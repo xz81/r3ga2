@@ -62,8 +62,8 @@
 		</select>
 	</div>
 	<div style="float:left; font-size: 16px; font-weight: bold"><?php echo _("fecha de trasplante: ") ?>
-		<div id="datetimepicker1" class="input-append date">
-                    <input id="export-start" data-format="dd/MM/yyyy" type="text" />
+		<div id="datetimepicker1" class="input-append date" data-date-weekStart="1">
+                    <input id="fechatrasplante" data-format="dd/MM/yyyy" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
 	</div>
